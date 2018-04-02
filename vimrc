@@ -21,7 +21,7 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'kien/ctrlp.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
-Plugin 'Valloric/YouCompleteMe'
+" Plugin 'Valloric/YouCompleteMe'
 Plugin 'fholgado/minibufexpl.vim'
 
 " All of your Plugins must be added before the following line
@@ -48,20 +48,10 @@ nnoremap <space> za
 let g:SimpylFold_docstring_preview=1
 
 " PEP8 indentation setup
-au BufNewFile,BufRead *.py:
-    \ set tabstop=4
-    \ set softtabstop=4
-    \ set shiftwidth=4
-    \ set textwidth=79
-    \ set expandtab
-    \ set autoindent
-    \ set fileformat=unix
+au BufNewFile,BufRead *.py: set tabstop=4 softtabstop=4 shiftwidth=4 textwidth=79 expandtab autoindent fileformat=unix
 
 " Indentation settings for other languages
-au BufNewFile,BufRead *.js, *.html, *.css:
-    \ set tabstop=2
-    \ set softtabstop=2
-    \ set shiftwidth=2
+au BufNewFile,BufRead *.js,*.html,*.css set tabstop=2 softtabstop=2 shiftwidth=2
 
 " Flag unncecessary whitepace
 "
@@ -111,4 +101,7 @@ set hidden
 
 " Use system clipboard
 set clipboard=unnamed
+
+" Non-retarded pasting
+set paste
 
